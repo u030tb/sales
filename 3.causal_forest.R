@@ -55,7 +55,3 @@ agg_func(g=c("gender","age","job"))
 
 pred_data %>% 
   fwrite("data/prep_data.csv",row.names = F)
-
-# HTE minus　→　雨の日の方が社食利用しやすい
-
-

@@ -20,7 +20,7 @@ pacman::p_load(
 # -------------------------------------------------------------------------
 
 raw_data <- 
-  fread("data/sample_data.csv",
+  fread("../data/sample_data.csv",
         data.table = F) %>% 
   mutate(time = ymd_hms(glue("{年}-{月}-{日} {時}:{分}:{秒}"))) %>% 
   mutate(date = date(time)) %>% 
@@ -80,7 +80,7 @@ purchase_table <-
             num = sum(num)) %>% 
   ungroup()
 
-# minusは意味がわからん
+# minusは意味がわからないので
 purchase_table %>% 
   filter(num < 0)
 
@@ -188,7 +188,7 @@ use_ts_daily_table <-
   mutate(use_flg = 1)
 
 # モデル投入前のデータセット
-# 2644人 * 48日
+# 2065人 * 48日
 meteoro_ts_daily_table$date %>% length
 HR_table$haku_id_new %>% length
 

@@ -41,10 +41,7 @@ map(male_20_vec,function(x){
 
 # お肉弁当×バランスサラダL
 
-
 # -------------------------------------------------------------------------
-
-
 purchase_table %>% 
   group_by(haku_id_new,menu) %>% 
   summarise(n_purchase = sum(num)) %>% 
@@ -130,4 +127,3 @@ purchase_table %>%
 
 # 結論
 # 800円でお肉弁当&バランスサラダLのセットを販売してはどうか
-
